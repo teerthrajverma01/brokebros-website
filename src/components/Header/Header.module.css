@@ -1,0 +1,86 @@
+header {
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+
+.headerContainer {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/*================= CTA ===================== */
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/*================= Socials ===================== */
+
+.headerSocials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  top: 35rem;
+}
+
+.headerSocials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/*================= ME ===================== */
+
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/*================= Scroll Down ===================== */
+
+.scrollDown {
+  position: absolute;
+  right: -2.3rem;
+  bottom: -29rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/*=============== MEDIA QUERIES(Medium devices) ===========*/
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+/*=============== MEDIA QUERIES(small devices) ===========*/
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  .headerSocials,
+  .scrollDown {
+    display: none;
+  }
+}
